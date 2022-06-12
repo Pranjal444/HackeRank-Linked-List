@@ -1,0 +1,21 @@
+SinglyLinkedListNode* insertNodeAtHead(SinglyLinkedListNode* llist, int data) 
+{
+    if(llist==nullptr)
+    {
+        llist=new SinglyLinkedListNode(data);
+        return llist;
+    }
+    SinglyLinkedListNode* temp=llist;
+SinglyLinkedListNode* newnode= new SinglyLinkedListNode(data);
+while(temp->next!=nullptr)
+{
+    temp=temp->next;
+}
+//SinglyLinkedListNode* newnode=new SinglyLinkedListNode(data);
+
+newnode->next=llist;
+llist=newnode;
+//newnode->next=NULL;
+return llist;
+
+}
